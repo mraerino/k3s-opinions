@@ -9,4 +9,5 @@ ports:
   web:
     redirectTo: websecure
 
-additionalArguments: []
+additionalArguments:
+  - "--api.insecure"
