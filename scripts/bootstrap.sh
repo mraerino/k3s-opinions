@@ -2,7 +2,7 @@
 echo "net.ipv6.conf.eth0.accept_ra = 2" > /etc/sysctl.d/eth0-enable-ra.conf
 
 # Install k3s
-curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--tls-san <hostname> --disable servicelb" sh -
+curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--tls-san <hostname> --disable servicelb --disable traefik" sh -
 
 # Create CSR
 openssl req -new -new -newkey rsa:2048 -keyout <user>.key -passout pass:client11 -out <user>.csr -subj "/O=admin/CN=<user>"

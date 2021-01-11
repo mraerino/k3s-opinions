@@ -1,0 +1,19 @@
+peers:
+  # CR3
+  - peer-address: 10.1.0.3
+    peer-asn: 207871
+    my-asn: 207871
+  # CR4
+  - peer-address: 10.1.0.4
+    peer-asn: 207871
+    my-asn: 207871
+address-pools:
+  - name: default
+    protocol: bgp
+    addresses:
+      - 10.128.0.0/16
+  - name: public-ips
+    protocol: bgp
+    addresses:
+      - 45.151.166.0/24
+    auto-assign: false

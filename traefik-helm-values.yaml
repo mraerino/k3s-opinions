@@ -1,0 +1,12 @@
+deployment:
+  kind: DaemonSet
+
+ingressRoute:
+  dashboard:
+    enabled: false
+
+ports:
+  web:
+    redirectTo: websecure
+
+additionalArguments: []
